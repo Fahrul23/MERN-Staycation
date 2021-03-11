@@ -48,10 +48,14 @@
     font-weight:500;
     font-family: "poppins", sans-serif;
     color:$primary;
+    &.hover{
+        color:$primary;    
+        text-decoration: none;
+    }
 }
 
 header{
-    border-bottom 1px solid $gray-200;
+    border-bottom: 1px solid $gray-200;
     width:100%;
     position:relative;
 
@@ -59,8 +63,14 @@ header{
         height:80px;
         .navbar-nav{
             li.nav-item{
+                &.active{
+                    a.nav-link{
+                        color: $primary;
+                    }
+                }
                 a{
-                   a.nav-link{
+                   &.nav-link{
+                       font-weight: 00;
                        color:$gray-900;
                        padding-left:1rem;
                        padding-right:1rem;
