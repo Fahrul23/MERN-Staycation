@@ -2,6 +2,7 @@ import React from 'react';
 import 'assets/scss/style.scss';
 import Button from 'elements/Buttons';
 import BrandIcon from '../parts/IconText';
+import Fade from 'react-reveal/Fade';
 
 
 export default function Header(props){
@@ -12,6 +13,7 @@ export default function Header(props){
 
 
     return(
+        <Fade>
         <header className="spacing-sm">
             <div className="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -43,5 +45,6 @@ export default function Header(props){
                 </nav>
             </div>
         </header>
+        </Fade>
     )
 }

@@ -1,15 +1,19 @@
 import Button from 'elements/Buttons';
 import React from 'react';
+import Fade from 'react-reveal/Fade';
+
 
 function MostPicked(props) {
     return (
         <section className="container" ref={props.refMostPicked}>
+            <Fade bottom>
             <h4 className="mb-3">Most Picked</h4>
             <div className="container-grid">
                 {
                     props.data.map((item,index) =>{
                         return (
                         <div key={`mospicked-${index}`} className={`item column-4${index === 0 ? " row-2" : " row-1"}`}>
+                            <Fade bottom delay={650 * index}>
                             <div className="card card-featured">
                                 <div className="tag">
                                     ${item.price}
@@ -32,11 +36,13 @@ function MostPicked(props) {
                                     </span>
                                 </div>
                             </div>
+                            </Fade>
                         </div>
                         )
                     })
                 }
             </div>
+            </Fade>
         </section>
     );
 } 
