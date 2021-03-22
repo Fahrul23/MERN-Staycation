@@ -103,7 +103,11 @@ section{
     width: 100%;
 }
 .card{
-    height: 100%;
+    &.bordered{
+        border: 1px solid $gray-200;
+    }
+    border-radius: 16px;
+        
     .tag{
         z-index: 3;
     font-size: 0.875rem;
@@ -141,7 +145,6 @@ section{
     &.card-featured {
         overflow: hidden;
         cursor: pointer;
-        border-radius: 16px;
         height: 100%;
         &:after {
           position: absolute;
